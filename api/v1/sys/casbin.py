@@ -11,7 +11,7 @@ from backend.common.security.jwt import DependsJwtAuth
 from backend.common.security.permission import RequestPermission
 from backend.common.security.rbac import DependsRBAC
 from backend.database.db import CurrentSession
-from backend.plugin.casbin.schema.casbin_rule import (
+from backend.plugin.casbin_rbac.schema.casbin_rule import (
     CreateGroupParam,
     CreatePolicyParam,
     DeleteAllPoliciesParam,
@@ -21,7 +21,7 @@ from backend.plugin.casbin.schema.casbin_rule import (
     UpdatePoliciesParam,
     UpdatePolicyParam,
 )
-from backend.plugin.casbin.service.casbin_service import casbin_service
+from backend.plugin.casbin_rbac.service.casbin_service import casbin_service
 
 router = APIRouter()
 

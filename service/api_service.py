@@ -7,9 +7,9 @@ from sqlalchemy import Select
 
 from backend.common.exception import errors
 from backend.database.db import async_db_session
-from backend.plugin.casbin.crud.crud_api import api_dao
-from backend.plugin.casbin.model import Api
-from backend.plugin.casbin.schema.api import CreateApiParam, UpdateApiParam
+from backend.plugin.casbin_rbac.crud.crud_api import api_dao
+from backend.plugin.casbin_rbac.model import Api
+from backend.plugin.casbin_rbac.schema.api import CreateApiParam, UpdateApiParam
 
 
 class ApiService:

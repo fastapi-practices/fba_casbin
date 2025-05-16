@@ -7,8 +7,8 @@ from sqlalchemy import Select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy_crud_plus import CRUDPlus
 
-from backend.plugin.casbin.model import Api
-from backend.plugin.casbin.schema.api import CreateApiParam, UpdateApiParam
+from backend.plugin.casbin_rbac.model import Api
+from backend.plugin.casbin_rbac.schema.api import CreateApiParam, UpdateApiParam
 
 
 class CRUDApi(CRUDPlus[Api]):

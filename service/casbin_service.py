@@ -6,9 +6,9 @@ from sqlalchemy import Select
 
 from backend.common.exception import errors
 from backend.database.db import async_db_session
-from backend.plugin.casbin.crud.crud_casbin import casbin_dao
-from backend.plugin.casbin.rbac import casbin_enforcer
-from backend.plugin.casbin.schema.casbin_rule import (
+from backend.plugin.casbin_rbac.crud.crud_casbin import casbin_dao
+from backend.plugin.casbin_rbac.rbac import casbin_enforcer
+from backend.plugin.casbin_rbac.schema.casbin_rule import (
     CreateGroupParam,
     CreatePolicyParam,
     DeleteAllPoliciesParam,

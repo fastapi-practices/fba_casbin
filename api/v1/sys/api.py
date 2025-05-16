@@ -10,8 +10,8 @@ from backend.common.security.jwt import DependsJwtAuth
 from backend.common.security.permission import RequestPermission
 from backend.common.security.rbac import DependsRBAC
 from backend.database.db import CurrentSession
-from backend.plugin.casbin.schema.api import CreateApiParam, GetApiDetail, UpdateApiParam
-from backend.plugin.casbin.service.api_service import api_service
+from backend.plugin.casbin_rbac.schema.api import CreateApiParam, GetApiDetail, UpdateApiParam
+from backend.plugin.casbin_rbac.service.api_service import api_service
 
 router = APIRouter()
 

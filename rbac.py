@@ -8,7 +8,7 @@ from fastapi import Request
 from backend.common.exception.errors import AuthorizationError
 from backend.core.conf import settings
 from backend.database.db import async_engine
-from backend.plugin.casbin.model import CasbinRule
+from backend.plugin.casbin_rbac.model import CasbinRule
 
 
 async def casbin_enforcer() -> casbin.AsyncEnforcer:
