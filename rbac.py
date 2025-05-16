@@ -6,8 +6,8 @@ import casbin_async_sqlalchemy_adapter
 from fastapi import Request
 
 from backend.common.exception.errors import AuthorizationError
+from backend.core.conf import settings
 from backend.database.db import async_engine
-from backend.plugin.casbin.conf import casbin_settings
 from backend.plugin.casbin.model import CasbinRule
 
 
@@ -48,7 +48,7 @@ async def casbin_verify(request: Request) -> None:
     path = request.url.path
 
     # casbin 鉴权白名单
-    if (method, path) in casbin_settings.RBAC_CASBIN_EXCLUDE:
+    if (method, path) in settings.RBAC_CASBIN_EXCLUDE:
         return
 
     # casbin 权限校验

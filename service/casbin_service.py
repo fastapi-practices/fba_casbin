@@ -7,6 +7,7 @@ from sqlalchemy import Select
 from backend.common.exception import errors
 from backend.database.db import async_db_session
 from backend.plugin.casbin.crud.crud_casbin import casbin_dao
+from backend.plugin.casbin.rbac import casbin_enforcer
 from backend.plugin.casbin.schema.casbin_rule import (
     CreateGroupParam,
     CreatePolicyParam,
@@ -16,7 +17,6 @@ from backend.plugin.casbin.schema.casbin_rule import (
     UpdatePoliciesParam,
     UpdatePolicyParam,
 )
-from backend.plugin.casbin.utils.rbac import casbin_enforcer
 
 
 class CasbinService:
